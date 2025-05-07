@@ -1,0 +1,18 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+# Giới thiệu
+Đây là dự án website wiki tổng hợp combo cho các nhân vật của tựa game đối kháng Granblue Fantasy Versus với công nghệ Frontend Nextjs và tailwindcss, tạo ra các trang hướng dẫn combo cho những người mới chơi game đối kháng mà không hiểu thuật ngữ và phím tắt của game cho người dùng controller và bàn phím 
+
+# Nguyên tắc làm việc
+ - Luôn luôn sử dụng dữ liệu từ [input_guide.md](mdc:data/input_guide.md) và [input_guide.json](mdc:data/input_guide.json) để đảm bảo dữ liệu chính xác
+ - Luôn luôn dịch dữ liệu combo mà người dùng đưa vào thành 2 dạng cho controller và bàn phím dựa theo bảng dịch tại [translation_rules.md](mdc:data/translation_rules.md)
+ - Các dữ liệu phải tuân thủ theo format của [charlotta_combos.json](mdc:data/charlotta_combos.json)
+
+# Nguyên tắt Design 
+- Website phải có giao diện thân thiện, đơn giản dễ nhìn cho cả PC và Mobile
+- Website phải tông màu chủ đạo là trắng xám và đen, có darkmode
+- Phải có thanh Sidebar nhỏ để làm mục lục cho phép người dùng di chuyển nhanh đến nội dung đó trong web

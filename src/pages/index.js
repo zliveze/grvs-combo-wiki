@@ -1,115 +1,58 @@
-import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
+import Head from 'next/head';
+import Link from 'next/link';
+import CombatNotationGuide from '../components/ui/CombatNotationGuide'; 
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const characters = [
+    { name: 'Anre', icon: 'https://www.dustloop.com/wiki/images/1/1f/GBVS_Anre_Icon.png' },
+    { name: 'Avatar Belial', icon: 'https://www.dustloop.com/wiki/images/b/b5/GBVS_Avatar_Belial_Icon.png' },
+    { name: 'Beelzebub', icon: 'https://www.dustloop.com/wiki/images/f/fd/GBVS_Beelzebub_Icon.png' },
+    { name: 'Belial', icon: 'https://www.dustloop.com/wiki/images/b/bb/GBVS_Belial_Icon.png' },
+    { name: 'Cagliostro', icon: 'https://www.dustloop.com/wiki/images/c/c7/GBVS_Cagliostro_Icon.png' },
+    { name: 'Charlotta', icon: 'https://www.dustloop.com/wiki/images/4/46/GBVS_Charlotta_Icon.png' },
+    { name: 'Djeeta', icon: 'https://www.dustloop.com/wiki/images/1/15/GBVS_Djeeta_Icon.png' },
+    { name: 'Eustace', icon: 'https://www.dustloop.com/wiki/images/c/c1/GBVS_Eustace_Icon.png' },
+    { name: 'Ferry', icon: 'https://www.dustloop.com/wiki/images/a/a0/GBVS_Ferry_Icon.png' },
+    { name: 'Gran', icon: 'https://www.dustloop.com/wiki/images/2/21/GBVS_Gran_Icon.png' },
+    { name: 'Katalina', icon: 'https://www.dustloop.com/wiki/images/a/aa/GBVS_Katalina_Icon.png' },
+    { name: 'Ladiva', icon: 'https://www.dustloop.com/wiki/images/5/52/GBVS_Ladiva_Icon.png' },
+    { name: 'Lancelot', icon: 'https://www.dustloop.com/wiki/images/2/26/GBVS_Lancelot_Icon.png' },
+    { name: 'Lowain', icon: 'https://www.dustloop.com/wiki/images/3/3c/GBVS_Lowain_Icon.png' },
+    { name: 'Metera', icon: 'https://www.dustloop.com/wiki/images/5/50/GBVS_Metera_Icon.png' },
+    { name: 'Narmaya', icon: 'https://www.dustloop.com/wiki/images/5/5e/GBVS_Narmaya_Icon.png' },
+    { name: 'Percival', icon: 'https://www.dustloop.com/wiki/images/3/3d/GBVS_Percival_Icon.png' },
+    { name: 'Seox', icon: 'https://www.dustloop.com/wiki/images/7/77/GBVS_Seox_Icon.png' },
+    { name: 'Soriz', icon: 'https://www.dustloop.com/wiki/images/7/7d/GBVS_Soriz_Icon.png' },
+    { name: 'Vaseraga', icon: 'https://www.dustloop.com/wiki/images/5/57/GBVS_Vaseraga_Icon.png' },
+    { name: 'Vira', icon: 'https://www.dustloop.com/wiki/images/9/99/GBVS_Vira_Icon.png' },
+    { name: 'Yuel', icon: 'https://www.dustloop.com/wiki/images/4/45/GBVS_Yuel_Icon.png' },
+    { name: 'Zeta', icon: 'https://www.dustloop.com/wiki/images/f/f0/GBVS_Zeta_Icon.png' },
+    { name: 'Zooey', icon: 'https://www.dustloop.com/wiki/images/f/f5/GBVS_Zooey_Icon.png' },
+];
 
 export default function Home() {
-  return (
-    <div
-      className={`${geistSans.className} ${geistMono.className} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/pages/index.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+    return (
+        <>
+            <Head>
+                <title>Wiki Combo GBVS</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta name="description" content="Granblue Fantasy Versus Combo Wiki" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
+
+            {/* Tailwind CSS classes are applied directly */}
+            <header className="bg-gray-800 text-white pt-8 min-h-[70px] border-b-4 border-blue-600 text-center">
+                <h1 className="text-2xl font-bold mb-2.5">Wiki Combo Granblue Fantasy Versus</h1>
+            </header>
+
+            <div className="container mx-auto w-11/12 overflow-hidden py-5">
+                <div className="mb-6 text-center">
+                  <CombatNotationGuide />
+                </div>
+             </div>
+
+            <footer className="text-center py-5 mt-10 text-white bg-gray-800">
+                <p>&copy; 2023 Wiki Combo GBVS</p>
+            </footer>
+        </>
+    );
 }
