@@ -1,0 +1,292 @@
+[
+  {
+    "combo": "c5XXX > [4]6X",
+    "position": "Anywhere",
+    "meter_gain": "",
+    "works_on": "All",
+    "difficulty": "Very Easy",
+    "notes": "Hold 4 during autocombo to charge for [4]6X.",
+    "combo_keyboard": "c. Auto-combo > Giữ A (1s) hoặc S+A (1s) > D + U/I/K/J",
+    "combo_controller": "c. Auto-combo > Giữ Lùi (1s) hoặc Xuống-Lùi (1s) > Tiến + X/Y/B/A"
+  },
+  {
+    "combo": "c5XXX > [2]8X",
+    "position": "Anywhere",
+    "meter_gain": "",
+    "works_on": "All",
+    "difficulty": "Very Easy",
+    "notes": "Use shortcut if you forgot to charge.",
+    "combo_keyboard": "c. Auto-combo > Giữ S (2s) hoặc S+A (2s) > W + U/I/K/J",
+    "combo_controller": "c. Auto-combo > Giữ Xuống (2s) hoặc Xuống-Lùi (2s) > Lên + X/Y/B/A"
+  },
+  {
+    "combo": "2U > 214H",
+    "position": "Anywhere",
+    "meter_gain": "",
+    "works_on": "All",
+    "difficulty": "Very Easy",
+    "notes": "Cheeky sweep confirm that leaves you +4 if blocked and gives hard KD if it connects.",
+    "combo_keyboard": "S + J > S, S+A, A + K",
+    "combo_controller": "Xuống + A > Xuống, Xuống-Lùi, Lùi + B"
+  },
+  {
+    "combo": "f5X > [4]6X",
+    "position": "Anywhere",
+    "meter_gain": "",
+    "works_on": "All",
+    "difficulty": "Easy",
+    "notes": "Far 1-button confirm. Use shortcut if no time to charge for [4]6X.",
+    "combo_keyboard": "f. U/I/K/J > Giữ A (1s) hoặc S+A (1s) > D + U/I/K/J",
+    "combo_controller": "f. X/Y/B/A > Giữ Lùi (1s) hoặc Xuống-Lùi (1s) > Tiến + X/Y/B/A"
+  },
+  {
+    "combo": "2X > [4]6X",
+    "position": "Anywhere",
+    "meter_gain": "",
+    "works_on": "All",
+    "difficulty": "Easy",
+    "notes": "Same as above for crouch buttons.",
+    "combo_keyboard": "S + U/I/K/J > Giữ A (1s) hoặc S+A (1s) > D + U/I/K/J",
+    "combo_controller": "Xuống + X/Y/B/A > Giữ Lùi (1s) hoặc Xuống-Lùi (1s) > Tiến + X/Y/B/A"
+  },
+  {
+    "combo": "2L, 2L, f5L > [4]6X",
+    "position": "Anywhere",
+    "meter_gain": "",
+    "works_on": "All",
+    "difficulty": "Easy",
+    "notes": "2L hitconfirm string. End at f5L if blocked. Can use shortcut to avoid having to charge. [4]6X X can be L or H, M often doesn't link.",
+    "combo_keyboard": "S + U, S + U, f. (Không di chuyển) + U > Giữ A (1s) hoặc S+A (1s) > D + U/I/K/J",
+    "combo_controller": "Xuống + X, Xuống + X, f. (Không di chuyển) + X > Giữ Lùi (1s) hoặc Xuống-Lùi (1s) > Tiến + X/Y/B/A"
+  },
+  {
+    "combo": "c5L/2L, c5MM > 214H, f5M > [4]6X",
+    "position": "Anywhere",
+    "meter_gain": "",
+    "works_on": "All",
+    "difficulty": "Medium",
+    "notes": "BnB c5L/2L hitconfirm string. [4]6X can be L or H. Replace f5M with f5L vs. wifi opponents.",
+    "combo_keyboard": "c. (Không di chuyển) + U/S + U, c. (Không di chuyển) + I, c. (Không di chuyển) + I > S, S+A, A + K, f. (Không di chuyển) + I > Giữ A (1s) hoặc S+A (1s) > D + U/I/K/J",
+    "combo_controller": "c. (Không di chuyển) + X/Xuống + X, c. (Không di chuyển) + Y, c. (Không di chuyển) + Y > Xuống, Xuống-Lùi, Lùi + B, f. (Không di chuyển) + Y > Giữ Lùi (1s) hoặc Xuống-Lùi (1s) > Tiến + X/Y/B/A"
+  },
+  {
+    "combo": "CH 2M, f5L > [4]6X",
+    "position": "Counterhit",
+    "meter_gain": "",
+    "works_on": "All",
+    "difficulty": "Medium",
+    "notes": "[4]6X can be L or H. Use shortcut if no time to charge for [4]6X.",
+    "combo_keyboard": "CH S + I, f. (Không di chuyển) + U > Giữ A (1s) hoặc S+A (1s) > D + U/I/K/J",
+    "combo_controller": "CH Xuống + Y, f. (Không di chuyển) + X > Giữ Lùi (1s) hoặc Xuống-Lùi (1s) > Tiến + X/Y/B/A"
+  },
+  {
+    "combo": "CH c5H, c5HX > 214H, f5M > [4]6X",
+    "position": "Counterhit",
+    "meter_gain": "",
+    "works_on": "All",
+    "difficulty": "Easy",
+    "notes": "[4]6X can be L or H.",
+    "combo_keyboard": "CH c. (Không di chuyển) + K, c. (Không di chuyển) + K, U/I/K/J > S, S+A, A + K, f. (Không di chuyển) + I > Giữ A (1s) hoặc S+A (1s) > D + U/I/K/J",
+    "combo_controller": "CH c. (Không di chuyển) + B, c. (Không di chuyển) + B, X/Y/B/A > Xuống, Xuống-Lùi, Lùi + B, f. (Không di chuyển) + Y > Giữ Lùi (1s) hoặc Xuống-Lùi (1s) > Tiến + X/Y/B/A"
+  },
+  {
+    "combo": "CH f5H, f5M > [4]6X",
+    "position": "Counterhit",
+    "meter_gain": "",
+    "works_on": "All",
+    "difficulty": "Easy",
+    "notes": "[4]6X can be L or H.",
+    "combo_keyboard": "CH f. (Không di chuyển) + K, f. (Không di chuyển) + I > Giữ A (1s) hoặc S+A (1s) > D + U/I/K/J",
+    "combo_controller": "CH f. (Không di chuyển) + B, f. (Không di chuyển) + Y > Giữ Lùi (1s) hoặc Xuống-Lùi (1s) > Tiến + X/Y/B/A"
+  },
+  {
+    "combo": "c5(XX) > 214M, f5L > [4]6X",
+    "position": "Crouching Hit",
+    "meter_gain": "",
+    "works_on": "All",
+    "difficulty": "Medium",
+    "notes": "Preserves 214H cooldown. [4]6X can be L or H.",
+    "combo_keyboard": "c. (Không di chuyển) + (XX) > S, S+A, A + I, f. (Không di chuyển) + U > Giữ A (1s) hoặc S+A (1s) > D + U/I/K/J",
+    "combo_controller": "c. (Không di chuyển) + (XX) > Xuống, Xuống-Lùi, Lùi + Y, f. (Không di chuyển) + X > Giữ Lùi (1s) hoặc Xuống-Lùi (1s) > Tiến + X/Y/B/A"
+  },
+  {
+    "combo": "c5(XX) > 214H, 2U",
+    "position": "Crouching Hit",
+    "meter_gain": "",
+    "works_on": "All",
+    "difficulty": "Easy",
+    "notes": "Hard KD, preserves [4]6H cooldown.",
+    "combo_keyboard": "c. (Không di chuyển) + (XX) > S, S+A, A + K, S + J",
+    "combo_controller": "c. (Không di chuyển) + (XX) > Xuống, Xuống-Lùi, Lùi + B, Xuống + A"
+  },
+  {
+    "combo": "c5(XX) > 214H, f5M > [4]6H > run forward > 2U",
+    "position": "Near Corner",
+    "meter_gain": "",
+    "works_on": "All",
+    "difficulty": "Medium",
+    "notes": "Works slightly outside of corner.",
+    "combo_keyboard": "c. (Không di chuyển) + (XX) > S, S+A, A + K, f. (Không di chuyển) + I > Giữ A (1s) hoặc S+A (1s) > D + K > Chạy tới (nhấn giữ D) > S + J",
+    "combo_controller": "c. (Không di chuyển) + (XX) > Xuống, Xuống-Lùi, Lùi + B, f. (Không di chuyển) + Y > Giữ Lùi (1s) hoặc Xuống-Lùi (1s) > Tiến + B > Chạy tới (nhấn giữ cần analog trái về phía trước) > Xuống + A"
+  },
+  {
+    "combo": "c5(XX) > 214H, f5M > [4]6H, c5MXX > [2]8X",
+    "position": "Corner",
+    "meter_gain": "",
+    "works_on": "All",
+    "difficulty": "Medium",
+    "notes": "hits of autocombo at end to give enough time to charge for [2]8X.",
+    "combo_keyboard": "c. (Không di chuyển) + (XX) > S, S+A, A + K, f. (Không di chuyển) + I > Giữ A (1s) hoặc S+A (1s) > D + K, c. (Không di chuyển) + I, c. (Không di chuyển) + (XX) > Giữ S (2s) hoặc S+A (2s) > W + U/I/K/J",
+    "combo_controller": "c. (Không di chuyển) + (XX) > Xuống, Xuống-Lùi, Lùi + B, f. (Không di chuyển) + Y > Giữ Lùi (1s) hoặc Xuống-Lùi (1s) > Tiến + B, c. (Không di chuyển) + Y, c. (Không di chuyển) + (XX) > Giữ Xuống (2s) hoặc Xuống-Lùi (2s) > Lên + X/Y/B/A"
+  },
+  {
+    "combo": "c5(XX) > [4]6H, c5MM > 214H, 2U",
+    "position": "Corner",
+    "meter_gain": "",
+    "works_on": "All",
+    "difficulty": "Medium",
+    "notes": "Sweep ender into dl. 22L for meaty demonflip with + on block slide",
+    "combo_keyboard": "c. (Không di chuyển) + (XX) > Giữ A (1s) hoặc S+A (1s) > D + K, c. (Không di chuyển) + I, c. (Không di chuyển) + I > S, S+A, A + K, S + J",
+    "combo_controller": "c. (Không di chuyển) + (XX) > Giữ Lùi (1s) hoặc Xuống-Lùi (1s) > Tiến + B, c. (Không di chuyển) + Y, c. (Không di chuyển) + Y > Xuống, Xuống-Lùi, Lùi + B, Xuống + A"
+  },
+  {
+    "combo": "c5(XX) > [4]6H, c5MM > 214M, f5L > 236236H",
+    "position": "Corner",
+    "meter_gain": "",
+    "works_on": "All",
+    "difficulty": "Hard",
+    "notes": "Alternate route to have [4]6H cooldown available sooner and avoid using 214H cooldown.",
+    "combo_keyboard": "c. (Không di chuyển) + (XX) > Giữ A (1s) hoặc S+A (1s) > D + K, c. (Không di chuyển) + I, c. (Không di chuyển) + I > S, S+A, A + I, f. (Không di chuyển) + U > S, S+D, D, S, S+D, D + K",
+    "combo_controller": "c. (Không di chuyển) + (XX) > Giữ Lùi (1s) hoặc Xuống-Lùi (1s) > Tiến + B, c. (Không di chuyển) + Y, c. (Không di chuyển) + Y > Xuống, Xuống-Lùi, Lùi + Y, f. (Không di chuyển) + X > Xuống, Xuống-Tiến, Tiến, Xuống, Xuống-Tiến, Tiến + B"
+  },
+  {
+    "combo": "c5(XX) > 214H, c5H > [4]6H, c5MXX > [2]8X",
+    "position": "Corner Crouching Hit",
+    "meter_gain": "",
+    "works_on": "All",
+    "difficulty": "Hard",
+    "notes": "Optimal route on crouch. Can replace c5MXX > [2]8X for c5M > 236236H/U if SBA/SSBA available.",
+    "combo_keyboard": "c. (Không di chuyển) + (XX) > S, S+A, A + K, c. (Không di chuyển) + K > Giữ A (1s) hoặc S+A (1s) > D + K, c. (Không di chuyển) + I, c. (Không di chuyển) + (XX) > Giữ S (2s) hoặc S+A (2s) > W + U/I/K/J",
+    "combo_controller": "c. (Không di chuyển) + (XX) > Xuống, Xuống-Lùi, Lùi + B, c. (Không di chuyển) + B > Giữ Lùi (1s) hoặc Xuống-Lùi (1s) > Tiến + B, c. (Không di chuyển) + Y, c. (Không di chuyển) + (XX) > Giữ Xuống (2s) hoặc Xuống-Lùi (2s) > Lên + X/Y/B/A"
+  },
+  {
+    "combo": "CH [4]6M, c5H > [4]6H, c5HXX > [2]8X",
+    "position": "Corner Counterhit",
+    "meter_gain": "",
+    "works_on": "All",
+    "difficulty": "Medium",
+    "notes": "Can replace c5HXX > [2]8X for c5H > 236236H/U if SBA/SSBA available.",
+    "combo_keyboard": "CH Giữ A (1s) hoặc S+A (1s) > D + I, c. (Không di chuyển) + K > Giữ A (1s) hoặc S+A (1s) > D + K, c. (Không di chuyển) + K, c. (Không di chuyển) + (XX) > Giữ S (2s) hoặc S+A (2s) > W + U/I/K/J",
+    "combo_controller": "CH Giữ Lùi (1s) hoặc Xuống-Lùi (1s) > Tiến + Y, c. (Không di chuyển) + B > Giữ Lùi (1s) hoặc Xuống-Lùi (1s) > Tiến + B, c. (Không di chuyển) + B, c. (Không di chuyển) + (XX) > Giữ Xuống (2s) hoặc Xuống-Lùi (2s) > Lên + X/Y/B/A"
+  },
+  {
+    "combo": "22H~low, c5M > [4]6H, c5MXX > [2]8X",
+    "position": "Corner",
+    "meter_gain": "",
+    "works_on": "who",
+    "difficulty": "Medium",
+    "notes": "Can replace c5MX > [2]8X for c5M > 236236H/U if SBA/SSBA available.",
+    "combo_keyboard": "S, S + K ~ (Không di chuyển), c. (Không di chuyển) + I > Giữ A (1s) hoặc S+A (1s) > D + K, c. (Không di chuyển) + I, c. (Không di chuyển) + (XX) > Giữ S (2s) hoặc S+A (2s) > W + U/I/K/J",
+    "combo_controller": "Xuống, Xuống + B ~ (Không di chuyển), c. (Không di chuyển) + Y > Giữ Lùi (1s) hoặc Xuống-Lùi (1s) > Tiến + B, c. (Không di chuyển) + Y, c. (Không di chuyển) + (XX) > Giữ Xuống (2s) hoặc Xuống-Lùi (2s) > Lên + X/Y/B/A"
+  },
+  {
+    "combo": "22H~H, c5M > 214H, c5HXX > [2]8X",
+    "position": "Corner",
+    "meter_gain": "",
+    "works_on": "who",
+    "difficulty": "Medium",
+    "notes": "Use when you don't have or want to save [4]6X cooldown.",
+    "combo_keyboard": "S, S + K ~ K, c. (Không di chuyển) + I > S, S+A, A + K, c. (Không di chuyển) + K, c. (Không di chuyển) + (XX) > Giữ S (2s) hoặc S+A (2s) > W + U/I/K/J",
+    "combo_controller": "Xuống, Xuống + B ~ B, c. (Không di chuyển) + Y > Xuống, Xuống-Lùi, Lùi + B, c. (Không di chuyển) + B, c. (Không di chuyển) + (XX) > Giữ Xuống (2s) hoặc Xuống-Lùi (2s) > Lên + X/Y/B/A"
+  },
+  {
+    "combo": "22H~H, c5H > [4]6H, c5HXX > [2]8X",
+    "position": "Corner",
+    "meter_gain": "",
+    "works_on": "who",
+    "difficulty": "Hard",
+    "notes": "Command grab must connect close to ground for first c5H to link. Can replace c5HX > [2]8X for c5M > 236236H/U if SBA/SSBA available.",
+    "combo_keyboard": "S, S + K ~ K, c. (Không di chuyển) + K > Giữ A (1s) hoặc S+A (1s) > D + K, c. (Không di chuyển) + K, c. (Không di chuyển) + (XX) > Giữ S (2s) hoặc S+A (2s) > W + U/I/K/J",
+    "combo_controller": "Xuống, Xuống + B ~ B, c. (Không di chuyển) + B > Giữ Lùi (1s) hoặc Xuống-Lùi (1s) > Tiến + B, c. (Không di chuyển) + B, c. (Không di chuyển) + (XX) > Giữ Xuống (2s) hoặc Xuống-Lùi (2s) > Lên + X/Y/B/A"
+  },
+  {
+    "combo": "22H~H, c5H > [4]6H, c5M > 214H, 2U",
+    "position": "Corner",
+    "meter_gain": "",
+    "works_on": "who",
+    "difficulty": "Very Hard",
+    "notes": "Command grab must connect close to ground for first c5H to link. Slight delay before c5M",
+    "combo_keyboard": "S, S + K ~ K, c. (Không di chuyển) + K > Giữ A (1s) hoặc S+A (1s) > D + K, c. (Không di chuyển) + I > S, S+A, A + K, S + J",
+    "combo_controller": "Xuống, Xuống + B ~ B, c. (Không di chuyển) + B > Giữ Lùi (1s) hoặc Xuống-Lùi (1s) > Tiến + B, c. (Không di chuyển) + Y > Xuống, Xuống-Lùi, Lùi + B, Xuống + A"
+  },
+  {
+    "combo": "c5H/2H > [2]8X",
+    "position": "Antiair",
+    "meter_gain": "",
+    "works_on": "who",
+    "difficulty": "Very Easy",
+    "notes": "Basic Antiair combo",
+    "combo_keyboard": "c. (Không di chuyển) + K/S + K > Giữ S (2s) hoặc S+A (2s) > W + U/I/K/J",
+    "combo_controller": "c. (Không di chuyển) + B/Xuống + B > Giữ Xuống (2s) hoặc Xuống-Lùi (2s) > Lên + X/Y/B/A"
+  },
+  {
+    "combo": "CH c5H/2H > [4]6L(whiff), c5MM > [2]8X",
+    "position": "Counterhit Antiair",
+    "meter_gain": "",
+    "works_on": "who",
+    "difficulty": "Easy",
+    "notes": "Basic CH antiair confirm.",
+    "combo_keyboard": "CH c. (Không di chuyển) + K/S + K > Giữ A (1s) hoặc S+A (1s) > D + U (đánh trượt), c. (Không di chuyển) + I, c. (Không di chuyển) + I > Giữ S (2s) hoặc S+A (2s) > W + U/I/K/J",
+    "combo_controller": "CH c. (Không di chuyển) + B/Xuống + B > Giữ Lùi (1s) hoặc Xuống-Lùi (1s) > Tiến + X (đánh trượt), c. (Không di chuyển) + Y, c. (Không di chuyển) + Y > Giữ Xuống (2s) hoặc Xuống-Lùi (2s) > Lên + X/Y/B/A"
+  },
+  {
+    "combo": "CH jU, 2U",
+    "position": "Counterhit Antiair",
+    "meter_gain": "",
+    "works_on": "who",
+    "difficulty": "Easy",
+    "notes": "May have to run forward to connect 2U. Gives hard KD.",
+    "combo_keyboard": "CH j. J, S + J",
+    "combo_controller": "CH j. A, Xuống + A"
+  },
+  {
+    "combo": "CH jU, c5MM > [4]6X",
+    "position": "Counterhit Antiair",
+    "meter_gain": "",
+    "works_on": "who",
+    "difficulty": "Medium",
+    "notes": "Better corner carry and gives hard KD if [4]6H is used.",
+    "combo_keyboard": "CH j. J, c. (Không di chuyển) + I, c. (Không di chuyển) + I > Giữ A (1s) hoặc S+A (1s) > D + U/I/K/J",
+    "combo_controller": "CH j. A, c. (Không di chuyển) + Y, c. (Không di chuyển) + Y > Giữ Lùi (1s) hoặc Xuống-Lùi (1s) > Tiến + X/Y/B/A"
+  },
+  {
+    "combo": "CH jU, 2[8]X",
+    "position": "Counterhit Antiair",
+    "meter_gain": "",
+    "works_on": "who",
+    "difficulty": "Medium",
+    "notes": "Off forward jump air to air.",
+    "combo_keyboard": "CH j. J, S + Giữ W (2s) hoặc W+A (2s) + U/I/K/J",
+    "combo_controller": "CH j. A, Xuống + Giữ Lên (2s) hoặc Lên-Lùi (2s) + X/Y/B/A"
+  },
+  {
+    "combo": "CH jU, jU > 236236U",
+    "position": "Antiair Near Corner",
+    "meter_gain": "",
+    "works_on": "who",
+    "difficulty": "Very Hard",
+    "notes": "Off forward jump air to air. Extremely dependent on how late first jU connects. This will never work IRL.",
+    "combo_keyboard": "CH j. J, j. J > S, S+D, D, S, S+D, D + J",
+    "combo_controller": "CH j. A, j. A > Xuống, Xuống-Tiến, Tiến, Xuống, Xuống-Tiến, Tiến + A"
+  },
+  {
+    "combo": "CH c5H/2H > 22H~L, c5M > [4]6H",
+    "position": "Counterhit Antiair",
+    "meter_gain": "",
+    "works_on": "who",
+    "difficulty": "Very Hard",
+    "notes": "Can replace [4]6H with 236236H/U if SBA/SSBA available.",
+    "combo_keyboard": "CH c. (Không di chuyển) + K/S + K > S, S + K ~ U, c. (Không di chuyển) + I > Giữ A (1s) hoặc S+A (1s) > D + K",
+    "combo_controller": "CH c. (Không di chuyển) + B/Xuống + B > Xuống, Xuống + B ~ X, c. (Không di chuyển) + Y > Giữ Lùi (1s) hoặc Xuống-Lùi (1s) > Tiến + B"
+  }
+]
