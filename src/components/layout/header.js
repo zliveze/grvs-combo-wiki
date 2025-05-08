@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useTheme } from 'next-themes';
+import Image from 'next/image';
 
 const Header = () => {
   const [mounted, setMounted] = useState(false);
@@ -17,8 +18,21 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white dark:bg-gray-900 shadow-sm border-b border-gray-200 dark:border-gray-700 sticky top-0 z-10 h-16">
-      <div className="container mx-auto px-4 py-3 h-full flex items-center">
+    <header className="relative shadow-sm border-b border-gray-200 dark:border-gray-700 z-10 h-30 overflow-hidden">
+      {/* Ảnh nền */}
+      <div className="absolute inset-0 w-full h-full z-0">
+        <Image 
+          src="/banner.jpg" 
+          alt="Granblue Fantasy Versus Banner" 
+          fill
+          quality={100}
+          priority
+          style={{ objectFit: 'cover', objectPosition: 'center 32%' }}
+        />
+        <div className="absolute inset-0 bg-white/75 dark:bg-gray-900/80"></div>
+      </div>
+      
+      <div className="container mx-auto px-4 py-3 h-full flex items-center z-10 relative">
         <div className="flex justify-between items-center w-full">
           {/* Logo */}
           <Link href="/" className="flex items-center">
