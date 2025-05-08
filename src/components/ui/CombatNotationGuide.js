@@ -88,17 +88,18 @@ const characterAbbreviations = [
 const CombatNotationGuide = () => {
   const [activeTab, setActiveTab] = useState('keyboard');
   const [searchTerm, setSearchTerm] = useState('');
+  const [isNotationExpanded, setIsNotationExpanded] = useState(false);
 
   const renderInputGuide = (device) => {
     const guide = inputGuide[device];
     return (
       <div className="mt-4">
-        <h3 className="text-lg font-semibold mb-2 text-blue-500">Hướng dẫn nhập liệu cơ bản</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+        <h3 className="text-lg font-semibold mb-2 text-gray-800">Hướng dẫn nhập liệu cơ bản</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-1">
           {Object.entries(guide).map(([action, keys]) => (
-            <div key={action} className="flex items-center p-2 bg-gray-800 text-white rounded-md">
-              <span className="font-medium mr-2">{action}:</span>
-              <span className="font-mono bg-gray-700 px-2 py-1 rounded">{keys}</span>
+            <div key={action} className="flex items-center justify-between p-1 bg-white text-gray-800 rounded-md shadow-sm border border-gray-200 text-sm hover:bg-gray-50 transition-colors">
+              <span className="font-medium">{action}:</span>
+              <span className="font-mono bg-blue-100 text-blue-800 px-2 py-0.5 rounded font-bold text-sm border border-blue-200 ml-1">{keys}</span>
             </div>
           ))}
         </div>
@@ -108,22 +109,22 @@ const CombatNotationGuide = () => {
 
   const renderNumpadNotation = () => {
     return (
-      <div className="mt-6">
-        <h3 className="text-lg font-semibold mb-2 text-blue-500">Ký hiệu số trên bàn phím số</h3>
-        <div className="grid grid-cols-3 gap-1 max-w-xs mx-auto mb-4 bg-gray-900 p-2 rounded-lg">
+      <div className="mt-4">
+        <h3 className="text-lg font-semibold mb-2 text-gray-800">Ký hiệu số trên bàn phím số</h3>
+        <div className="grid grid-cols-3 gap-0.5 max-w-xs mx-auto mb-4 bg-white p-1 rounded-lg shadow-sm border border-gray-200">
           {notationData.map((item) => (
             <div
               key={item.symbol}
-              className={`p-3 border border-gray-700 rounded-md text-center ${item.symbol === "5" ? "bg-gray-700" : "bg-gray-800"} text-white`}
+              className={`p-1.5 border border-gray-200 rounded-md text-center ${item.symbol === "5" ? "bg-blue-50" : "bg-white"} text-gray-800 text-sm hover:shadow-md transition-shadow`}
             >
-              <div className="font-bold text-blue-400">{item.symbol}</div>
-              <div className="text-sm mt-1 text-gray-300">
+              <div className="font-bold text-blue-600 text-lg">{item.symbol}</div>
+              <div className="text-xs mt-0.5 text-gray-600">
                 {activeTab === 'keyboard' ? item.keyboard : item.controller}
               </div>
             </div>
           ))}
         </div>
-        <p className="text-sm text-gray-500 italic">Số đại diện cho hướng trên bàn phím số. Ví dụ, 236+L trở thành 236L.</p>
+        <p className="text-xs text-gray-500 italic">Số đại diện cho hướng trên bàn phím số. Ví dụ, 236+L trở thành 236L.</p>
       </div>
     );
   };
@@ -131,15 +132,32 @@ const CombatNotationGuide = () => {
   const renderAdditionalNotations = () => {
     return (
       <div className="mt-6">
-        <h3 className="text-lg font-semibold mb-2 text-blue-500">Chú thích bổ sung</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-          {additionalNotations.map((item, index) => (
-            <div key={index} className="flex items-center p-2 bg-gray-800 text-white rounded-md">
-              <span className="font-mono font-bold text-blue-400 min-w-16">{item.symbol}</span>
-              <span className="ml-2">{item.description}</span>
-            </div>
-          ))}
+        <div className="flex justify-between items-center mb-2">
+          <h3 className="text-lg font-semibold text-gray-800">Chú thích bổ sung</h3>
+          <button 
+            onClick={() => setIsNotationExpanded(!isNotationExpanded)}
+            className="text-blue-600 hover:text-blue-800 focus:outline-none bg-blue-50 px-2 py-1 rounded-md text-sm transition-colors"
+          >
+            {isNotationExpanded ? 'Thu gọn' : 'Mở rộng'}
+          </button>
         </div>
+        
+        {isNotationExpanded && (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-1">
+            {additionalNotations.map((item, index) => (
+              <div key={index} className="flex items-center justify-between p-1 bg-white text-gray-800 rounded-md shadow-sm border border-gray-200 text-sm hover:bg-gray-50 transition-colors">
+                <span className="ml-1">{item.description}</span>
+                <span className="font-mono font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded border border-blue-100 min-w-14 text-center">{item.symbol}</span>
+              </div>
+            ))}
+          </div>
+        )}
+        
+        {!isNotationExpanded && (
+          <div className="p-3 bg-white text-gray-600 rounded-md shadow-sm border border-gray-200 text-center text-sm hover:bg-gray-50 transition-colors">
+            Nhấn "Mở rộng" để xem chi tiết các ký hiệu và chú thích bổ sung
+          </div>
+        )}
       </div>
     );
   };
@@ -180,8 +198,8 @@ const CombatNotationGuide = () => {
     );
 
     return (
-      <div className="bg-gray-900 p-4 rounded-lg shadow-lg text-white">
-        <h3 className="text-lg font-semibold mb-2 text-blue-500 border-b border-gray-700 pb-2">Nhân vật</h3>
+      <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200 text-gray-800">
+        <h3 className="text-lg font-semibold mb-2 text-gray-800 border-b border-gray-200 pb-2">Nhân vật</h3>
         
         <div className="mb-4">
           <input
@@ -189,7 +207,7 @@ const CombatNotationGuide = () => {
             placeholder="Tìm nhân vật..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full px-3 py-2 bg-gray-800 text-white border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 bg-white text-gray-800 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-gray-500"
           />
         </div>
         
@@ -198,7 +216,7 @@ const CombatNotationGuide = () => {
             <Link 
               href={`/character/${character.name.toLowerCase().replace(/ /g, '-')}`} 
               key={character.name}
-              className="flex flex-col items-center p-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 transition-colors"
+              className="flex flex-col items-center p-2 bg-white text-gray-800 rounded-md hover:bg-gray-100 transition-colors border border-gray-200"
             >
               <div className="w-10 h-10 rounded-full overflow-hidden mb-1">
                 <img 
@@ -208,7 +226,7 @@ const CombatNotationGuide = () => {
                 />
               </div>
               <span className="text-xs text-center mt-1">{character.name}</span>
-              <span className="text-xs text-center text-gray-400">{character.abbr}</span>
+              <span className="text-xs text-center text-gray-500">{character.abbr}</span>
             </Link>
           ))}
         </div>
@@ -223,21 +241,21 @@ const CombatNotationGuide = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row gap-4">
+    <div className="flex flex-col md:flex-row gap-4 bg-gray-50">
       {/* Hướng dẫn chú thích */}
-      <div className="md:w-2/3 lg:w-3/4 bg-gray-900 p-6 rounded-lg shadow-lg text-white order-2 md:order-1">
-        <h2 className="text-2xl font-bold mb-4 text-blue-400 border-b border-gray-700 pb-2">Hướng dẫn chú thích Combo</h2>
+      <div className="md:w-2/3 lg:w-3/4 bg-white p-6 rounded-lg shadow-sm border border-gray-200 text-gray-800 order-2 md:order-1">
+        <h2 className="text-2xl font-bold mb-4 text-gray-800 border-b border-gray-200 pb-2">Hướng dẫn chú thích Combo</h2>
 
         {/* Tab Navigation */}
-        <div className="flex border-b border-gray-700 mb-4">
+        <div className="flex border-b border-gray-200 mb-4">
           <button
-            className={`py-2 px-4 text-sm font-medium ${activeTab === 'keyboard' ? 'bg-gray-800 text-blue-400 border-b-2 border-blue-500' : 'text-gray-400 hover:text-white hover:bg-gray-800'} rounded-t-md transition-colors`}
+            className={`py-2 px-4 text-sm font-medium ${activeTab === 'keyboard' ? 'bg-blue-50 text-blue-800 border-b-2 border-blue-500' : 'text-gray-600 hover:text-gray-800 hover:bg-gray-50'} rounded-t-md transition-colors`}
             onClick={() => setActiveTab('keyboard')}
           >
             Bàn phím
           </button>
           <button
-            className={`py-2 px-4 text-sm font-medium ${activeTab === 'controller' ? 'bg-gray-800 text-blue-400 border-b-2 border-blue-500' : 'text-gray-400 hover:text-white hover:bg-gray-800'} rounded-t-md transition-colors`}
+            className={`py-2 px-4 text-sm font-medium ${activeTab === 'controller' ? 'bg-blue-50 text-blue-800 border-b-2 border-blue-500' : 'text-gray-600 hover:text-gray-800 hover:bg-gray-50'} rounded-t-md transition-colors`}
             onClick={() => setActiveTab('controller')}
           >
             Controller
@@ -246,9 +264,16 @@ const CombatNotationGuide = () => {
 
         {/* Tab Content */}
         <div className="mt-4">
-          {activeTab === 'keyboard' && renderInputGuide('keyboard')}
-          {activeTab === 'controller' && renderInputGuide('controller')}
-          {renderNumpadNotation()}
+          {/* Display Input Guide and Numpad Notation side by side */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              {activeTab === 'keyboard' && renderInputGuide('keyboard')}
+              {activeTab === 'controller' && renderInputGuide('controller')}
+            </div>
+            <div>
+              {renderNumpadNotation()}
+            </div>
+          </div>
           {renderAdditionalNotations()}
         </div>
       </div>
