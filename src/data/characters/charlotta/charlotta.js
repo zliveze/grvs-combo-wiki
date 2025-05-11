@@ -1,4 +1,8 @@
 import normalMoves from './normalMoves';
+import uniqueActions from './uniqueActions';
+import specialMoves from './specialMoves';
+import skyboundArts from './skyboundArts';
+import superSkyboundArts from './superSkyboundArts';
 
 const charlottaData = {
   name: "Charlotta",
@@ -68,7 +72,44 @@ const charlottaData = {
       "j.L": "(Nhảy) U",
       "j.M": "(Nhảy) I",
       "j.H": "(Nhảy) K",
-      "j.U": "(Nhảy) J"
+      "j.U": "(Nhảy) J",
+      // Universal Mechanics
+      "5L+M": "U + I", // Ground Throw
+      "j.L+M": "(Nhảy) U + I", // Air Throw
+      "5M+H": "I + K", // Universal Overhead
+      // Special Moves (Technical Inputs)
+      "[4]6L": "Giữ A > D + U",
+      "[4]6M": "Giữ A > D + I",
+      "[4]6H": "Giữ A > D + K",
+      "[4]6X": "Giữ A > D + U/I/K",
+      "[2]8L": "Giữ S > W + U",
+      "[2]8M": "Giữ S > W + I",
+      "[2]8H": "Giữ S > W + K",
+      "[2]8X": "Giữ S > W + U/I/K",
+      "214L": "S, S+A, A + U",
+      "214M": "S, S+A, A + I",
+      "214H": "S, S+A, A + K",
+      "214X": "S, S+A, A + U/I/K",
+      "22L": "S, S + U",
+      "22M": "S, S + I",
+      "22H": "S, S + K",
+      "22X": "S, S + U/I/K",
+      // Special Moves (Easy Inputs)
+      "6S": "D + P", // Easy Shining Onslaught (P là Skill)
+      "5S": "P",    // Easy Holy Ladder (P là Skill)
+      "4S": "A + P", // Easy Sword of Lumiel (P là Skill)
+      "2S": "S + P", // Easy Noble Strategy (P là Skill)
+      // Noble Strategy Follow-ups
+      "22X > 5": "(Sau 22X) Không Input",
+      "22X > L": "(Sau 22X) U",
+      "22X > M": "(Sau 22X) I",
+      "22X > H": "(Sau 22X) K",
+      // Skybound Arts
+      "236236H": "S+D, S+D + K", // SBA (Technical): Xuống+Tiến, Xuống+Tiến + Heavy
+      "236S": "S+D + P", // Easy SBA: Xuống+Tiến + Skill
+      // Super Skybound Arts
+      "236236U": "S+D, S+D + J", // SSBA (Technical): Xuống+Tiến, Xuống+Tiến + Unique
+      "236S+U": "S+D, P+J" // Easy SSBA: Xuống+Tiến, Skill+Unique
     },
     controller: {
       // Notation: L=X, M=Y, H=B, U=A (Unique)
@@ -89,10 +130,51 @@ const charlottaData = {
       "j.L": "(Nhảy) X",
       "j.M": "(Nhảy) Y",
       "j.H": "(Nhảy) B",
-      "j.U": "(Nhảy) A"
+      "j.U": "(Nhảy) A",
+      // Universal Mechanics
+      "5L+M": "X + Y", // Ground Throw
+      "j.L+M": "(Nhảy) X + Y", // Air Throw
+      "5M+H": "Y + B", // Universal Overhead
+      // Special Moves (Technical Inputs)
+      "[4]6L": "Giữ Lùi > Tiến + X",
+      "[4]6M": "Giữ Lùi > Tiến + Y",
+      "[4]6H": "Giữ Lùi > Tiến + B",
+      "[4]6X": "Giữ Lùi > Tiến + X/Y/B",
+      "[2]8L": "Giữ Xuống > Lên + X",
+      "[2]8M": "Giữ Xuống > Lên + Y",
+      "[2]8H": "Giữ Xuống > Lên + B",
+      "[2]8X": "Giữ Xuống > Lên + X/Y/B",
+      "214L": "Xuống, Xuống-Lùi, Lùi + X",
+      "214M": "Xuống, Xuống-Lùi, Lùi + Y",
+      "214H": "Xuống, Xuống-Lùi, Lùi + B",
+      "214X": "Xuống, Xuống-Lùi, Lùi + X/Y/B",
+      "22L": "Xuống, Xuống + X",
+      "22M": "Xuống, Xuống + Y",
+      "22H": "Xuống, Xuống + B",
+      "22X": "Xuống, Xuống + X/Y/B",
+      // Special Moves (Easy Inputs)
+      "6S": "Tiến + RB", // Easy Shining Onslaught (RB là Skill)
+      "5S": "RB",    // Easy Holy Ladder (RB là Skill)
+      "4S": "Lùi + RB", // Easy Sword of Lumiel (RB là Skill)
+      "2S": "Xuống + RB", // Easy Noble Strategy (RB là Skill)
+       // Noble Strategy Follow-ups
+      "22X > 5": "(Sau 22X) Không Input",
+      "22X > L": "(Sau 22X) X",
+      "22X > M": "(Sau 22X) Y",
+      "22X > H": "(Sau 22X) B",
+      // Skybound Arts
+      "236236H": "Xuống-Tiến, Xuống-Tiến + B", // SBA (Technical): Xuống-Tiến, Xuống-Tiến + Heavy
+      "236S": "Xuống-Tiến + RB", // Easy SBA: Xuống-Tiến + Skill
+      // Super Skybound Arts
+      "236236U": "Xuống-Tiến, Xuống-Tiến + A", // SSBA (Technical): Xuống-Tiến, Xuống-Tiến + Unique
+      "236S+U": "Xuống-Tiến, RB+A" // Easy SSBA: Xuống-Tiến, Skill+Unique
     }
   },
-  normalMoves: normalMoves
+  normalMoves: normalMoves,
+  uniqueActions: uniqueActions,
+  specialMoves: specialMoves,
+  skyboundArts: skyboundArts,
+  superSkyboundArts: superSkyboundArts
 }
 
 export default charlottaData;

@@ -19,6 +19,7 @@ Dưới đây là bảng quy tắc dịch các ký hiệu combo trong Granblue V
 | `M` (Medium)           | `I`                                   | `Y`                                         |
 | `H` (Heavy)            | `K`                                   | `B`                                         |
 | `U` (Unique)           | `J`                                   | `A`                                         |
+| `S` (Skill Button)     | `P`                                   | `RB`                                        |
 | `>`                    | `>`                                   | `>`                                         |
 | `,`                    | `,`                                   | `,`                                         |
 | `->/~`                 | `->/~`                                | `->/~`                                      |
@@ -29,10 +30,12 @@ Dưới đây là bảng quy tắc dịch các ký hiệu combo trong Granblue V
 | `[4]6X`                | `Giữ A (1s) hoặc S+A (1s) > D + U/I/K/J` | `Giữ Lùi (1s) hoặc Xuống-Lùi (1s) > Tiến + X/Y/B/A` |
 | `[2]8X`                | `Giữ S (2s) hoặc S+A (2s) > W + U/I/K/J` | `Giữ Xuống (2s) hoặc Xuống-Lùi (2s) > Lên + X/Y/B/A` |
 | `214X`                 | `S, S+A, A + U/I/K/J`                 | `Xuống, Xuống-Lùi, Lùi + X/Y/B/A`           |
-| `236X`                 | `S, S+D, D + U/I/K/J`                 | `Xuống, Xuống-Tiến, Tiến + X/Y/B/A`         |
+| `236X`                 | `S+D + U/I/K/J`                       | `Xuống-Tiến + X/Y/B/A`                      |
 | `22X`                  | `S, S + U/I/K/J`                      | `Xuống, Xuống + X/Y/B/A`                    |
-| `236236H` (SBA)        | `S, S+D, D, S, S+D, D + K`            | `Xuống, Xuống-Tiến, Tiến, Xuống, Xuống-Tiến, Tiến + B` |
-| `236236U` (SSBA)       | `S, S+D, D, S, S+D, D + J`            | `Xuống, Xuống-Tiến, Tiến, Xuống, Xuống-Tiến, Tiến + A` |
+| `236S` (Easy SBA)      | `S+D + P`                             | `Xuống-Tiến + RB`                           |
+| `236S+U` (Easy SSBA)   | `S+D + P + J`                         | `Xuống-Tiến + RB + A`                       |
+| `236236H` (SBA)        | `S+D, S+D + K`                        | `Xuống-Tiến, Xuống-Tiến + B`                |
+| `236236U` (SSBA)       | `S+D, S+D + J`                        | `Xuống-Tiến, Xuống-Tiến + A`                |
 | `22H~low`              | `S, S + K ~ (Không di chuyển)`        | `Xuống, Xuống + B ~ (Không di chuyển)`      |
 | `22H~H`                | `S, S + K ~ K`                        | `Xuống, Xuống + B ~ B`                      |
 | `(whiff)`              | `(đánh trượt)`                        | `(đánh trượt)`                              |
