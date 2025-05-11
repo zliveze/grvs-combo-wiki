@@ -25,6 +25,9 @@ export default function Home() {
 }
 
 Home.getLayout = function getLayout(page) {
+  const sections = [
+    { id: 'notation-guide', title: 'Hướng dẫn chú thích' },
+  ];
   return (
     <DefaultLayout
       showSidebar={true}
