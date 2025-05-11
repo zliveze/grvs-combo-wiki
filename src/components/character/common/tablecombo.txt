@@ -1,0 +1,245 @@
+<section class="citizen-section" id="citizen-section-1">
+<ul><li><a rel="nofollow" class="external text" href="https://docs.google.com/spreadsheets/d/1FtmFaKZwGzmkP_Boig-BC_m4tFOii-qc5bReUPZiDAU/edit?usp=sharing" bis_skin_checked="1">Basic Combos Document</a> - Please note that this document is a work in progress and is liable to change as more information is obtained.</li></ul>
+<table class="wikitable sortable jquery-tablesorter" border="1" style="margin: 1em auto 1em auto;text-align: center">
+
+<thead><tr>
+<th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Combo</th>
+<th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Position</th>
+<th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Meter Gain</th>
+<th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Works on:</th>
+<th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Difficulty</th>
+<th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Notes
+</th></tr></thead><tbody>
+<tr>
+<td>c5XXX &gt; [4]6X</td>
+<td>Anywhere</td>
+<td></td>
+<td>All</td>
+<td data-sort-value="1"><span class="colorful-text-1">Very Easy</span></td>
+<td>Hold 4 during autocombo to charge for [4]6X.
+</td></tr>
+<tr>
+<td>c5XXX &gt; [2]8X</td>
+<td>Anywhere</td>
+<td></td>
+<td>All</td>
+<td data-sort-value="1"><span class="colorful-text-1">Very Easy</span></td>
+<td>Use shortcut if you forgot to charge.
+</td></tr>
+<tr>
+<td><span class="colorful-text-2">2U</span> &gt; <span class="colorful-text-4">214H</span></td>
+<td>Anywhere</td>
+<td></td>
+<td>All</td>
+<td data-sort-value="1"><span class="colorful-text-1">Very Easy</span></td>
+<td>Cheeky sweep confirm that leaves you +4 if blocked and gives hard KD if it connects.
+</td></tr>
+<tr>
+<td>f5X &gt; [4]6X</td>
+<td>Anywhere</td>
+<td></td>
+<td>All</td>
+<td data-sort-value="2"><span class="colorful-text-2">Easy</span></td>
+<td>Far 1-button confirm. Use shortcut if no time to charge for [4]6X.
+</td></tr>
+<tr>
+<td>2X &gt; [4]6X</td>
+<td>Anywhere</td>
+<td></td>
+<td>All</td>
+<td data-sort-value="2"><span class="colorful-text-2">Easy</span></td>
+<td>Same as above for crouch buttons.
+</td></tr>
+<tr>
+<td><span class="colorful-text-1">2L</span>, <span class="colorful-text-1">2L</span>, <span class="colorful-text-1">f5L</span> &gt; [4]6X</td>
+<td>Anywhere</td>
+<td></td>
+<td>All</td>
+<td data-sort-value="2"><span class="colorful-text-2">Easy</span></td>
+<td><span class="colorful-text-1">2L</span> hitconfirm string. End at <span class="colorful-text-1">f5L</span> if blocked. Can use shortcut to avoid having to charge. [4]6X X can be <span class="colorful-text-1">L</span> or <span class="colorful-text-4">H</span>, <span class="colorful-text-3">M</span> often doesn't link.
+</td></tr>
+<tr>
+<td><span class="colorful-text-1">c5L</span>/<span class="colorful-text-1">2L</span>, <span class="colorful-text-3">c5MM</span> &gt; <span class="colorful-text-4">214H</span>, <span class="colorful-text-3">f5M</span> &gt; [4]6X</td>
+<td>Anywhere</td>
+<td></td>
+<td>All</td>
+<td data-sort-value="3"><span class="colorful-text-3">Medium</span></td>
+<td>BnB <span class="colorful-text-1">c5L</span>/<span class="colorful-text-1">2L</span> hitconfirm string. [4]6X can be <span class="colorful-text-1">L</span> or <span class="colorful-text-4">H</span>. Replace <span class="colorful-text-3">f5M</span> with <span class="colorful-text-1">f5L</span> vs. wifi opponents.
+</td></tr>
+<tr>
+<td>CH <span class="colorful-text-3">2M</span>, <span class="colorful-text-1">f5L</span> &gt; [4]6X</td>
+<td>Counterhit</td>
+<td></td>
+<td>All</td>
+<td data-sort-value="3"><span class="colorful-text-3">Medium</span></td>
+<td>[4]6X can be <span class="colorful-text-1">L</span> or <span class="colorful-text-4">H</span>. Use shortcut if no time to charge for [4]6X.
+</td></tr>
+<tr>
+<td>CH <span class="colorful-text-4">c5H</span>, c5HX &gt; <span class="colorful-text-4">214H</span>, <span class="colorful-text-3">f5M</span> &gt; [4]6X</td>
+<td>Counterhit</td>
+<td></td>
+<td>All</td>
+<td data-sort-value="2"><span class="colorful-text-2">Easy</span></td>
+<td>[4]6X can be <span class="colorful-text-1">L</span> or <span class="colorful-text-4">H</span>.
+</td></tr>
+<tr>
+<td>CH <span class="colorful-text-4">f5H</span>, <span class="colorful-text-3">f5M</span> &gt; [4]6X</td>
+<td>Counterhit</td>
+<td></td>
+<td>All</td>
+<td data-sort-value="2"><span class="colorful-text-2">Easy</span></td>
+<td>[4]6X can be <span class="colorful-text-1">L</span> or <span class="colorful-text-4">H</span>.
+</td></tr>
+<tr>
+<td>c5(XX) &gt; <span class="colorful-text-3">214M</span>, <span class="colorful-text-1">f5L</span> &gt; [4]6X</td>
+<td>Crouching Hit</td>
+<td></td>
+<td>All</td>
+<td data-sort-value="3"><span class="colorful-text-3">Medium</span></td>
+<td>Preserves <span class="colorful-text-4">214H</span> cooldown. [4]6X can be <span class="colorful-text-1">L</span> or <span class="colorful-text-4">H</span>.
+</td></tr>
+<tr>
+<td>c5(XX) &gt; <span class="colorful-text-4">214H</span>, <span class="colorful-text-2">2U</span></td>
+<td>Crouching Hit</td>
+<td></td>
+<td>All</td>
+<td data-sort-value="2"><span class="colorful-text-2">Easy</span></td>
+<td>Hard KD, preserves <span class="colorful-text-4">[4]6H</span> cooldown.
+</td></tr>
+<tr>
+<td>c5(XX) &gt; <span class="colorful-text-4">214H</span>, <span class="colorful-text-3">f5M</span> &gt; <span class="colorful-text-4">[4]6H</span> &gt; run forward &gt; <span class="colorful-text-2">2U</span></td>
+<td>Near Corner</td>
+<td></td>
+<td>All</td>
+<td data-sort-value="3"><span class="colorful-text-3">Medium</span></td>
+<td>Works slightly outside of corner.
+</td></tr>
+<tr>
+<td>c5(XX) &gt; <span class="colorful-text-4">214H</span>, <span class="colorful-text-3">f5M</span> &gt; <span class="colorful-text-4">[4]6H</span>, c5MXX &gt; [2]8X</td>
+<td>Corner</td>
+<td></td>
+<td>All</td>
+<td data-sort-value="3"><span class="colorful-text-3">Medium</span></td>
+<td>hits of autocombo at end to give enough time to charge for [2]8X.
+</td></tr>
+<tr>
+<td>c5(XX) &gt; <span class="colorful-text-4">[4]6H</span>, <span class="colorful-text-3">c5MM</span> &gt; <span class="colorful-text-4">214H</span>, <span class="colorful-text-2">2U</span></td>
+<td>Corner</td>
+<td></td>
+<td>All</td>
+<td data-sort-value="3"><span class="colorful-text-3">Medium</span></td>
+<td>Sweep ender into dl. 22L for meaty demonflip with + on block slide
+</td></tr>
+<tr>
+<td>c5(XX) &gt; <span class="colorful-text-4">[4]6H</span>, <span class="colorful-text-3">c5MM</span> &gt; <span class="colorful-text-3">214M</span>, <span class="colorful-text-1">f5L</span> &gt; <span class="colorful-text-4">236236H</span></td>
+<td>Corner</td>
+<td></td>
+<td>All</td>
+<td data-sort-value="4"><span class="colorful-text-5">Hard</span></td>
+<td>Alternate route to have <span class="colorful-text-4">[4]6H</span> cooldown available sooner and avoid using <span class="colorful-text-4">214H</span> cooldown.
+</td></tr>
+<tr>
+<td>c5(XX) &gt; <span class="colorful-text-4">214H</span>, <span class="colorful-text-4">c5H</span> &gt; <span class="colorful-text-4">[4]6H</span>, c5MXX &gt; [2]8X</td>
+<td>Corner Crouching Hit</td>
+<td></td>
+<td>All</td>
+<td data-sort-value="4"><span class="colorful-text-5">Hard</span></td>
+<td>Optimal route on crouch. Can replace c5MXX &gt; [2]8X for <span class="colorful-text-3">c5M</span> &gt; <span class="colorful-text-4">236236H</span>/<span class="colorful-text-2">U</span> if SBA/SSBA available.
+</td></tr>
+<tr>
+<td>CH <span class="colorful-text-3">[4]6M</span>, <span class="colorful-text-4">c5H</span> &gt; <span class="colorful-text-4">[4]6H</span>, c5HXX &gt; [2]8X</td>
+<td>Corner Counterhit</td>
+<td></td>
+<td>All</td>
+<td data-sort-value="3"><span class="colorful-text-3">Medium</span></td>
+<td>Can replace c5HXX &gt; [2]8X for <span class="colorful-text-4">c5H</span> &gt; <span class="colorful-text-4">236236H</span>/<span class="colorful-text-2">U</span> if SBA/SSBA available.
+</td></tr>
+<tr>
+<td><span class="colorful-text-4">22H</span>~low, <span class="colorful-text-3">c5M</span> &gt; <span class="colorful-text-4">[4]6H</span>, c5MXX &gt; [2]8X</td>
+<td>Corner</td>
+<td></td>
+<td>who</td>
+<td data-sort-value="3"><span class="colorful-text-3">Medium</span></td>
+<td>Can replace c5MX &gt; [2]8X for <span class="colorful-text-3">c5M</span> &gt; <span class="colorful-text-4">236236H</span>/<span class="colorful-text-2">U</span> if SBA/SSBA available.
+</td></tr>
+<tr>
+<td><span class="colorful-text-4">22H</span>~<span class="colorful-text-4">H</span>, <span class="colorful-text-3">c5M</span> &gt; <span class="colorful-text-4">214H</span>, c5HXX &gt; [2]8X</td>
+<td>Corner</td>
+<td></td>
+<td>who</td>
+<td data-sort-value="3"><span class="colorful-text-3">Medium</span></td>
+<td>Use when you don't have or want to save [4]6X cooldown.
+</td></tr>
+<tr>
+<td><span class="colorful-text-4">22H</span>~<span class="colorful-text-4">H</span>, <span class="colorful-text-4">c5H</span> &gt; <span class="colorful-text-4">[4]6H</span>, c5HXX &gt; [2]8X</td>
+<td>Corner</td>
+<td></td>
+<td>who</td>
+<td data-sort-value="4"><span class="colorful-text-5">Hard</span></td>
+<td>Command grab must connect close to ground for first <span class="colorful-text-4">c5H</span> to link. Can replace c5HX &gt; [2]8X for <span class="colorful-text-3">c5M</span> &gt; <span class="colorful-text-4">236236H</span>/<span class="colorful-text-2">U</span> if SBA/SSBA available.
+</td></tr>
+<tr>
+<td><span class="colorful-text-4">22H</span>~<span class="colorful-text-4">H</span>, <span class="colorful-text-4">c5H</span> &gt; <span class="colorful-text-4">[4]6H</span>, <span class="colorful-text-3">c5M</span> &gt; <span class="colorful-text-4">214H</span>, <span class="colorful-text-2">2U</span></td>
+<td>Corner</td>
+<td></td>
+<td>who</td>
+<td data-sort-value="5"><span class="colorful-text-4">Very Hard</span></td>
+<td>Command grab must connect close to ground for first <span class="colorful-text-4">c5H</span> to link. Slight delay before <span class="colorful-text-3">c5M</span>
+</td></tr>
+<tr>
+<td><span class="colorful-text-4">c5H</span>/<span class="colorful-text-4">2H</span> &gt; [2]8X</td>
+<td>Antiair</td>
+<td></td>
+<td>who</td>
+<td data-sort-value="1"><span class="colorful-text-1">Very Easy</span></td>
+<td>Basic Antiair combo
+</td></tr>
+<tr>
+<td>CH <span class="colorful-text-4">c5H</span>/<span class="colorful-text-4">2H</span> &gt; <span class="colorful-text-1">[4]6L</span>(whiff), <span class="colorful-text-3">c5MM</span> &gt; [2]8X</td>
+<td>Counterhit Antiair</td>
+<td></td>
+<td>who</td>
+<td data-sort-value="2"><span class="colorful-text-2">Easy</span></td>
+<td>Basic CH antiair confirm.
+</td></tr>
+<tr>
+<td>CH <span class="colorful-text-2">jU</span>, <span class="colorful-text-2">2U</span></td>
+<td>Counterhit Antiair</td>
+<td></td>
+<td>who</td>
+<td data-sort-value="2"><span class="colorful-text-2">Easy</span></td>
+<td>May have to run forward to connect <span class="colorful-text-2">2U</span>. Gives hard KD.
+</td></tr>
+<tr>
+<td>CH <span class="colorful-text-2">jU</span>, <span class="colorful-text-3">c5MM</span> &gt; [4]6X</td>
+<td>Counterhit Antiair</td>
+<td></td>
+<td>who</td>
+<td data-sort-value="3"><span class="colorful-text-3">Medium</span></td>
+<td>Better corner carry and gives hard KD if <span class="colorful-text-4">[4]6H</span> is used.
+</td></tr>
+<tr>
+<td>CH <span class="colorful-text-2">jU</span>, 2[8]X</td>
+<td>Counterhit Antiair</td>
+<td></td>
+<td>who</td>
+<td data-sort-value="3"><span class="colorful-text-3">Medium</span></td>
+<td>Off forward jump air to air.
+</td></tr>
+<tr>
+<td>CH <span class="colorful-text-2">jU</span>, <span class="colorful-text-2">jU</span> &gt; <span class="colorful-text-2">236236U</span></td>
+<td>Antiair Near Corner</td>
+<td></td>
+<td>who</td>
+<td data-sort-value="5"><span class="colorful-text-4">Very Hard</span></td>
+<td>Off forward jump air to air. Extremely dependent on how late first <span class="colorful-text-2">jU</span> connects. This will never work IRL.
+</td></tr>
+<tr>
+<td>CH <span class="colorful-text-4">c5H</span>/<span class="colorful-text-4">2H</span> &gt; <span class="colorful-text-4">22H</span>~<span class="colorful-text-1">L</span>, <span class="colorful-text-3">c5M</span> &gt; <span class="colorful-text-4">[4]6H</span></td>
+<td>Counterhit Antiair</td>
+<td></td>
+<td>who</td>
+<td data-sort-value="5"><span class="colorful-text-4">Very Hard</span></td>
+<td>Can replace <span class="colorful-text-4">[4]6H</span> with <span class="colorful-text-4">236236H</span>/<span class="colorful-text-2">U</span> if SBA/SSBA available.
+</td></tr></tbody><tfoot></tfoot></table>
+</section>
