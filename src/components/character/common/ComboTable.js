@@ -37,36 +37,36 @@ const escapeRegex = (string) => {
 
 const getHighlightClass = (ruleType, targetInputType, isButtonPlaceholder = false) => {
   if (isButtonPlaceholder) {
-    return targetInputType === 'keyboard' ? 'font-bold text-sky-500 dark:text-sky-400' : 'font-bold text-lime-500 dark:text-lime-400';
+    return targetInputType === 'keyboard' ? 'font-bold text-sky-500 dark:text-sky-400 px-1.5 py-0.5 bg-sky-50 dark:bg-sky-900/30 rounded border border-sky-200 dark:border-sky-800 mx-0.5' : 'font-bold text-lime-500 dark:text-lime-400 px-1.5 py-0.5 bg-lime-50 dark:bg-lime-900/30 rounded border border-lime-200 dark:border-lime-800 mx-0.5';
   }
   switch (ruleType) {
     case 'direction':
     case 'motion_standalone': // Treat standalone motions like directions for styling
-      return 'font-medium text-purple-600 dark:text-purple-400';
+      return 'font-medium text-purple-600 dark:text-purple-400 px-1.5 py-0.5 bg-purple-50 dark:bg-purple-900/30 rounded border border-purple-200 dark:border-purple-800 mx-0.5';
     case 'button':
     case 'isSkillButton':
     case 'isUniqueAttack':
-      return targetInputType === 'keyboard' ? 'font-bold text-sky-500 dark:text-sky-400' : 'font-bold text-lime-500 dark:text-lime-400';
+      return targetInputType === 'keyboard' ? 'font-bold text-sky-500 dark:text-sky-400 px-1.5 py-0.5 bg-sky-50 dark:bg-sky-900/30 rounded border border-sky-200 dark:border-sky-800 mx-0.5' : 'font-bold text-lime-500 dark:text-lime-400 px-1.5 py-0.5 bg-lime-50 dark:bg-lime-900/30 rounded border border-lime-200 dark:border-lime-800 mx-0.5';
     case 'motion': // For motions like 236X, 214X
     case 'motion_charge': // For charge motions [4]6X
-      return 'font-semibold text-amber-600 dark:text-amber-400';
+      return 'font-semibold text-amber-600 dark:text-amber-400 px-1.5 py-0.5 bg-amber-50 dark:bg-amber-900/30 rounded border border-amber-200 dark:border-amber-800 mx-0.5';
     case 'special':
     case 'super':
     case 'special_followup':
     case 'isEasySBA':
     case 'isEasySSBA':
-      return 'font-bold text-rose-500 dark:text-rose-400';
+      return 'font-bold text-rose-500 dark:text-rose-400 px-1.5 py-0.5 bg-rose-50 dark:bg-rose-900/30 rounded border border-rose-200 dark:border-rose-800 mx-0.5';
     case 'connector':
-      return 'font-normal text-gray-500 dark:text-gray-400 mx-px';
+      return 'font-normal text-gray-500 dark:text-gray-400 mx-1';
     case 'modifier':
     case 'modifier_hold':
     case 'modifier_release':
     case 'modifier_choice':
     case 'modifier_repeat':
     case 'modifier_hitcount':
-      return 'italic text-slate-600 dark:text-slate-300';
+      return 'italic text-slate-600 dark:text-slate-300 px-1 py-0.5 bg-slate-50 dark:bg-slate-900/30 rounded mx-0.5';
     case 'action':
-      return 'text-sm text-gray-700 dark:text-gray-200';
+      return 'text-sm text-gray-700 dark:text-gray-200 px-1.5 py-0.5 bg-gray-50 dark:bg-gray-900/30 rounded border border-gray-200 dark:border-gray-800 mx-0.5';
     default:
       return 'text-gray-700 dark:text-gray-200';
   }
@@ -168,6 +168,9 @@ const parseAndTranslateCombo = (comboString, targetInputType, providedInputGuide
 
   const tokenizerPatterns = [
     ...sortedGameNotations,
+    "\\[\\d\\]\\d[LMHUS]", // Patterns như [4]6L, [2]8M 
+    "\\[\\d\\]\\dX",       // Patterns như [4]6X, [2]8X
+    "\\[\\d\\]",           // QUAN TRỌNG: Pattern cho [4], [2] đứng riêng
     "c5XXX", "c5XX", "f5X", "\\(XX\\)",
     "\\[\\d\\][LMHUS]", "\\d[LMHUS]", "[LMHUS]", "\\d",
     "[cfj]\\.", "->/~", ">", ",", "\\+", "~",
@@ -434,13 +437,14 @@ const parseAndTranslateCombo = (comboString, targetInputType, providedInputGuide
     }
 
     // Xử lý thêm cho các ký hiệu [X] nơi X là số (hướng)
-    else if (!ruleFound && /^\[(\d)\]/.test(token)) {
+    else if (!ruleFound && /^\[(\d)\](\d)([LMHUS])?$/.test(token)) {
       const match = token.match(/^\[(\d)\](\d)([LMHUS])?$/);
       if (match) {
         const holdDirection = match[1];
         const releaseDirection = match[2];
         const buttonChar = match[3]; // Có thể là undefined nếu không có nút
 
+        // Sử dụng hàm getHoldDirectionText để lấy văn bản phù hợp (Giữ Lùi, Giữ A, v.v.)
         const holdText = getHoldDirectionText(holdDirection, targetInputType);
         
         // Map các số thành hướng tương ứng
@@ -485,36 +489,37 @@ const parseAndTranslateCombo = (comboString, targetInputType, providedInputGuide
                            `<span class="${getHighlightClass('direction', targetInputType)}">${releaseText}</span>`;
         }
       }
-      else {
-        // Xử lý các trường hợp như [4]6X, [2]8X
-        const generalMatch = token.match(/^\[(\d)\](\d)X$/);
-        if (generalMatch) {
-          const holdDirection = generalMatch[1];
-          const releaseDirection = generalMatch[2];
-          
-          const holdText = getHoldDirectionText(holdDirection, targetInputType);
-          
-          // Map các số thành hướng tương ứng
-          const directionMap = {
-            "keyboard": {
-              "1": "S+A", "2": "S", "3": "S+D", "4": "A", "6": "D", "7": "W+A", "8": "W", "9": "W+D"
-            },
-            "controller": {
-              "1": "Xuống-Lùi", "2": "Xuống", "3": "Xuống-Tiến", "4": "Lùi", "6": "Tiến", "7": "Lên-Lùi", "8": "Lên", "9": "Lên-Tiến"
-            }
-          };
-          
-          // Lấy text hướng giải phóng
-          const releaseText = directionMap[targetInputType][releaseDirection] || releaseDirection;
-          
-          ruleFound = true;
-          
-          // Format: Giữ A (1s) > D + nút
-          translatedToken = `<span class="${getHighlightClass('motion_charge', targetInputType)}">${holdText}</span>` +
-                           `<span class="${getHighlightClass('connector', targetInputType)}"> > </span>` +
-                           `<span class="${getHighlightClass('direction', targetInputType)}">${releaseText}</span>` +
-                           `<span class="${getHighlightClass('connector', targetInputType)}"> + nút</span>`;
-        }
+    }
+    else if (!ruleFound && /^\[(\d)\](\d)X$/.test(token)) {
+      // Xử lý các trường hợp như [4]6X, [2]8X
+      const match = token.match(/^\[(\d)\](\d)X$/);
+      if (match) {
+        const holdDirection = match[1];
+        const releaseDirection = match[2];
+        
+        // Sử dụng hàm getHoldDirectionText để lấy văn bản phù hợp
+        const holdText = getHoldDirectionText(holdDirection, targetInputType);
+        
+        // Map các số thành hướng tương ứng
+        const directionMap = {
+          "keyboard": {
+            "1": "S+A", "2": "S", "3": "S+D", "4": "A", "6": "D", "7": "W+A", "8": "W", "9": "W+D"
+          },
+          "controller": {
+            "1": "Xuống-Lùi", "2": "Xuống", "3": "Xuống-Tiến", "4": "Lùi", "6": "Tiến", "7": "Lên-Lùi", "8": "Lên", "9": "Lên-Tiến"
+          }
+        };
+        
+        // Lấy text hướng giải phóng
+        const releaseText = directionMap[targetInputType][releaseDirection] || releaseDirection;
+        
+        ruleFound = true;
+        
+        // Format: Giữ A (1s) > D + nút (đối với [4]6X trên bàn phím)
+        translatedToken = `<span class="${getHighlightClass('motion_charge', targetInputType)}">${holdText}</span>` +
+                          `<span class="${getHighlightClass('connector', targetInputType)}"> > </span>` +
+                          `<span class="${getHighlightClass('direction', targetInputType)}">${releaseText}</span>` +
+                          `<span class="${getHighlightClass('connector', targetInputType)}"> + nút</span>`;
       }
     }
 
@@ -531,6 +536,17 @@ const parseAndTranslateCombo = (comboString, targetInputType, providedInputGuide
         translatedToken = `<span class="${getHighlightClass('connector', targetInputType)}">></span>`;
     }
 
+    // Xử lý riêng cho [4], [2], v.v. đứng một mình
+    else if (!ruleFound && /^\[(\d)\]$/.test(token)) {
+      const match = token.match(/^\[(\d)\]$/);
+      if (match) {
+        const direction = match[1];
+        ruleFound = true;
+        const holdText = getHoldDirectionText(direction, targetInputType);
+        translatedToken = `<span class="${getHighlightClass('motion_charge', targetInputType)}">${holdText}</span>`;
+      }
+    }
+
     if (ruleFound) {
         if (translatedToken.includes("<span")) { 
             htmlOutput += translatedToken;
@@ -543,7 +559,9 @@ const parseAndTranslateCombo = (comboString, targetInputType, providedInputGuide
   }
   
   // Lưu kết quả vào cache trước khi trả về
-  const result = { __html: htmlOutput };
+  const result = {
+    __html: `<div class="flex flex-wrap items-center gap-1">${htmlOutput}</div>`
+  };
   comboCache.set(cacheKey, result);
   return result;
 };
@@ -583,7 +601,7 @@ const ComboTable = ({ combosData = [], inputGuide }) => {
           
           <div className="relative">
             <button 
-              className="text-xs text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 underline"
+              className="text-xs text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 underline px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800"
               onClick={() => setShowTooltip(!showTooltip)}
               aria-expanded={showTooltip}
               aria-haspopup="true"
@@ -592,17 +610,17 @@ const ComboTable = ({ combosData = [], inputGuide }) => {
             </button>
             
             {showTooltip && (
-              <div className="absolute right-0 z-10 mt-2 w-72 bg-white dark:bg-gray-800 rounded-md shadow-lg p-3 text-sm border border-gray-200 dark:border-gray-700">
-                <h3 className="font-medium text-gray-800 dark:text-white mb-2 pb-1 border-b border-gray-200 dark:border-gray-700">Ý nghĩa màu sắc</h3>
-                <div className="grid grid-cols-1 gap-1.5">
+              <div className="absolute right-0 z-10 mt-2 w-80 bg-white dark:bg-gray-800 rounded-md shadow-lg p-4 text-sm border border-gray-200 dark:border-gray-700">
+                <h3 className="font-medium text-gray-800 dark:text-white mb-3 pb-1 border-b border-gray-200 dark:border-gray-700">Ý nghĩa màu sắc & định dạng</h3>
+                <div className="grid grid-cols-1 gap-2">
                   {colorGuideItems.map((item, index) => (
-                    <div key={index} className="flex items-center">
-                      <span className={`${item.class} mr-2`}>■</span>
+                    <div key={index} className="flex items-center rounded-md p-1 hover:bg-gray-50 dark:hover:bg-gray-750">
+                      <div className={`min-w-8 text-center mr-2 ${item.class}`}>■</div>
                       <span className="text-gray-600 dark:text-gray-300">{item.label}</span>
                     </div>
                   ))}
                 </div>
-                <div className="mt-2 text-xs text-gray-500 border-t border-gray-200 dark:border-gray-700 pt-1">
+                <div className="mt-3 text-xs text-gray-500 border-t border-gray-200 dark:border-gray-700 pt-2">
                   Nhấn vào "Bàn phím" hoặc "Controller" để chuyển đổi hiển thị.
                 </div>
               </div>
@@ -610,22 +628,32 @@ const ComboTable = ({ combosData = [], inputGuide }) => {
           </div>
         </div>
         
-        <div className="mt-3">
-          <span className="mr-2 text-sm text-gray-600 dark:text-gray-300">Hiển thị input cho:</span>
-          <button
-            onClick={() => handleInputTypeChange('keyboard')}
-            className={`px-3 py-1.5 text-xs sm:text-sm rounded-md mr-2 transition-colors duration-150 ${activeInputType === 'keyboard' ? 'bg-blue-600 text-white shadow-sm' : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600'}`}
-            aria-pressed={activeInputType === 'keyboard'}
-          >
-            Bàn phím
-          </button>
-          <button
-            onClick={() => handleInputTypeChange('controller')}
-            className={`px-3 py-1.5 text-xs sm:text-sm rounded-md transition-colors duration-150 ${activeInputType === 'controller' ? 'bg-green-600 text-white shadow-sm' : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600'}`}
-            aria-pressed={activeInputType === 'controller'}
-          >
-            Controller
-          </button>
+        <div className="mt-4 flex items-center">
+          <span className="mr-3 text-sm text-gray-600 dark:text-gray-300">Hiển thị input cho:</span>
+          <div className="flex space-x-2 bg-gray-100 dark:bg-gray-800 p-1 rounded-lg">
+            <button
+              onClick={() => handleInputTypeChange('keyboard')}
+              className={`px-4 py-2 text-sm rounded-md transition-all duration-200 ${
+                activeInputType === 'keyboard' 
+                  ? 'bg-blue-600 text-white shadow-sm font-medium' 
+                  : 'bg-transparent text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+              }`}
+              aria-pressed={activeInputType === 'keyboard'}
+            >
+              Bàn phím
+            </button>
+            <button
+              onClick={() => handleInputTypeChange('controller')}
+              className={`px-4 py-2 text-sm rounded-md transition-all duration-200 ${
+                activeInputType === 'controller' 
+                  ? 'bg-green-600 text-white shadow-sm font-medium' 
+                  : 'bg-transparent text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+              }`}
+              aria-pressed={activeInputType === 'controller'}
+            >
+              Controller
+            </button>
+          </div>
         </div>
       </div>
       <div className="overflow-x-auto">
@@ -642,14 +670,17 @@ const ComboTable = ({ combosData = [], inputGuide }) => {
           <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
             {combosData.map((comboItem, index) => (
               <tr key={index} className="hover:bg-gray-50 dark:hover:bg-gray-750 transition-colors duration-150">
-                <td className="px-4 py-3 text-sm text-gray-700 dark:text-gray-200">
-                  <div className="font-mono leading-relaxed" dangerouslySetInnerHTML={parseAndTranslateCombo(comboItem.combo, activeInputType, inputGuide, parsedTranslationRules)} />
+                <td className="px-4 py-4 text-sm text-gray-700 dark:text-gray-200">
+                  <div 
+                    className="font-mono leading-relaxed" 
+                    dangerouslySetInnerHTML={parseAndTranslateCombo(comboItem.combo, activeInputType, inputGuide, parsedTranslationRules)} 
+                  />
                 </td>
-                <td className="px-4 py-3 text-sm text-gray-500 dark:text-gray-400">{comboItem.position}</td>
-                <td className="px-4 py-3 text-sm text-gray-500 dark:text-gray-400">{comboItem.meterGain || '-'}</td>
-                <td className="px-4 py-3 text-sm text-gray-500 dark:text-gray-400">{comboItem.worksOn}</td>
-                <td className="px-4 py-3 text-sm">
-                  <span className={`px-2 py-0.5 inline-flex text-xs leading-5 font-semibold rounded-full ${
+                <td className="px-4 py-4 text-sm text-gray-500 dark:text-gray-400">{comboItem.position}</td>
+                <td className="px-4 py-4 text-sm text-gray-500 dark:text-gray-400">{comboItem.meterGain || '-'}</td>
+                <td className="px-4 py-4 text-sm text-gray-500 dark:text-gray-400">{comboItem.worksOn}</td>
+                <td className="px-4 py-4 text-sm">
+                  <span className={`px-3 py-1 inline-flex text-xs leading-5 font-medium rounded-full ${
                     comboItem.difficulty === 'Very Easy' ? 'bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-100' :
                     comboItem.difficulty === 'Easy' ? 'bg-sky-100 text-sky-800 dark:bg-sky-800 dark:text-sky-100' :
                     comboItem.difficulty === 'Medium' ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-800 dark:text-yellow-100' :
@@ -660,7 +691,7 @@ const ComboTable = ({ combosData = [], inputGuide }) => {
                     {comboItem.difficulty}
                   </span>
                 </td>
-                <td className="px-4 py-3 text-sm text-gray-500 dark:text-gray-400 leading-relaxed whitespace-pre-line">{comboItem.notes}</td>
+                <td className="px-4 py-4 text-sm text-gray-500 dark:text-gray-400 leading-relaxed whitespace-pre-line">{comboItem.notes}</td>
               </tr>
             ))}
           </tbody>
