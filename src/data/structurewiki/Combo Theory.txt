@@ -1,0 +1,15 @@
+<section class="citizen-section" id="citizen-section-2">
+<ul><li>May need to use 1-2 autocombo hits after <span class="colorful-text-1">c5L</span> or <span class="colorful-text-4">c5H</span> to move closer and ensure 214X connects</li>
+<li>May need to use 1-2 autocombo hits after <span class="colorful-text-1">c5L</span> or <span class="colorful-text-4">c5H</span> during juggles, either to give time to charge or to ensure <span class="colorful-text-3">214M</span>/<span class="colorful-text-4">H</span> connects high enough to link another move after.</li>
+<li><span class="colorful-text-4">214H</span>, <span class="colorful-text-3">f5M</span> links on all grounded hits</li>
+<li><span class="colorful-text-3">214M</span>, <span class="colorful-text-1">f5L</span> links on crouching hits</li>
+<li>[4]6X enders can be replaced with <span class="colorful-text-4">236236H</span>. Similarly, [2]8X enders can be replaced with <span class="colorful-text-2">236236U</span>.</li>
+<li>Generally, in juggles <span class="colorful-text-4">c5H</span> can be replaced with <span class="colorful-text-2">236236U</span> to avoid later scaling.</li>
+<li><span class="colorful-text-4">[4]6H</span>, <span class="colorful-text-4">c5H</span> doesn't work unless opponent was already airborne.</li></ul>
+<h3><span class="mw-headline" id="Execution_Tips">Execution Tips</span></h3>
+<ul><li>[4]6X requires holding back or down-back for 1 second.</li>
+<li>[2]8X requires holding down or down-back for 2 second.</li>
+<li>Normal attack string or auto-combo can be be done while charging as long as it doesn't interrupt the charge motion. You can also hide the fact from your opponent that you're charging in this manner. (ex. M[4]MM<span class="colorful-text-4">8H</span>)</li>
+<li>Moving the directional from down-back to back or to down while charging is still valid for charge motion. Useful if you have to do a standing normal attack.</li>
+<li>A standing normal can be inputted in between [2]8X (ex. <span class="colorful-text-3">[2]5M</span><span class="colorful-text-4">8H</span>) but the window is tight.</li></ul>
+</section>

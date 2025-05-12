@@ -1,0 +1,69 @@
+<section class="citizen-section" id="citizen-section-6">
+<h3><span class="mw-headline" id="Brilliant_Moon"><big>Brilliant Moon</big></span></h3>
+<p><span class="input-badge"><b><span class="colorful-text-4">236236H</span></b></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r507530"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r501092"> or <span class="input-badge"><b>236S</b></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r507530"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r501092">
+</p>
+<div class="attack-container" bis_skin_checked="1"><div class="attack-gallery" bis_skin_checked="1"><div id="tabber-27" class="tabber tabber--live" bis_skin_checked="1"><header class="tabber__header"><button class="tabber__header__prev" aria-hidden="true"></button><nav class="tabber__tabs" role="tablist"><a class="tabber__tab" id="tabber-tab-Images-27" href="#tabber-tabpanel-Images-27" role="tab" aria-controls="tabber-tabpanel-Images-27" tabindex="0" aria-selected="true" bis_skin_checked="1">Images</a><a class="tabber__tab" id="tabber-tab-Hitboxes-27" href="#tabber-tabpanel-Hitboxes-27" role="tab" aria-controls="tabber-tabpanel-Hitboxes-27" tabindex="-1" aria-selected="false" bis_skin_checked="1">Hitboxes</a></nav><button class="tabber__header__next" aria-hidden="true"></button></header><section class="tabber__section" style="height: 284px;"><article class="tabber__panel" id="tabber-tabpanel-Images-27" role="tabpanel" tabindex="0" aria-labelledby="tabber-tab-Images-27"><p class="mw-empty-elt">
+</p><div id="mw-category-media" bis_skin_checked="1">
+<ul class="gallery mw-gallery-nolines">
+		<li class="gallerybox" style="width: 215px">
+			<div class="thumb" style="width: 210px;" bis_skin_checked="1"><span typeof="mw:File"><a href="/w/File:GBVS_Charlotta_236236H_Start.png" class="mw-file-description" bis_skin_checked="1"><img alt="" src="/wiki/images/thumb/c/cc/GBVS_Charlotta_236236H_Start.png/210px-GBVS_Charlotta_236236H_Start.png" decoding="async" loading="lazy" width="210" height="124" srcset="/wiki/images/thumb/c/cc/GBVS_Charlotta_236236H_Start.png/315px-GBVS_Charlotta_236236H_Start.png 1.5x, /wiki/images/thumb/c/cc/GBVS_Charlotta_236236H_Start.png/420px-GBVS_Charlotta_236236H_Start.png 2x"></a></span></div>
+			<div class="gallerytext" bis_skin_checked="1"> </div>
+		</li>
+		<li class="gallerybox" style="width: 215px">
+			<div class="thumb" style="width: 210px;" bis_skin_checked="1"><span typeof="mw:File"><a href="/w/File:GBVS_Charlotta_236236H.png" class="mw-file-description" bis_skin_checked="1"><img alt="" src="/wiki/images/thumb/8/8c/GBVS_Charlotta_236236H.png/210px-GBVS_Charlotta_236236H.png" decoding="async" loading="lazy" width="210" height="128" srcset="/wiki/images/thumb/8/8c/GBVS_Charlotta_236236H.png/315px-GBVS_Charlotta_236236H.png 1.5x, /wiki/images/thumb/8/8c/GBVS_Charlotta_236236H.png/420px-GBVS_Charlotta_236236H.png 2x"></a></span></div>
+			<div class="gallerytext" bis_skin_checked="1"></div>
+		</li>
+</ul>
+</div><p class="mw-empty-elt"></p></article>
+<article class="tabber__panel" id="tabber-tabpanel-Hitboxes-27" role="tabpanel" tabindex="0" aria-labelledby="tabber-tab-Hitboxes-27"><p class="mw-empty-elt">
+</p><div id="mw-category-media" bis_skin_checked="1">
+<ul class="gallery mw-gallery-nolines">
+		<li class="gallerybox" style="width: 215px">
+			<div class="thumb" style="width: 210px;" bis_skin_checked="1"><span typeof="mw:File"><a href="/w/File:GBVS_Charlotta_236236H_Hitbox.png" class="mw-file-description" bis_skin_checked="1"><img alt="" src="/wiki/images/thumb/b/bb/GBVS_Charlotta_236236H_Hitbox.png/210px-GBVS_Charlotta_236236H_Hitbox.png" decoding="async" loading="lazy" width="210" height="128" srcset="/wiki/images/thumb/b/bb/GBVS_Charlotta_236236H_Hitbox.png/315px-GBVS_Charlotta_236236H_Hitbox.png 1.5x, /wiki/images/thumb/b/bb/GBVS_Charlotta_236236H_Hitbox.png/420px-GBVS_Charlotta_236236H_Hitbox.png 2x"></a></span></div>
+			<div class="gallerytext" bis_skin_checked="1"> </div>
+		</li>
+</ul>
+</div><p class="mw-empty-elt"></p></article>
+</section></div></div><div class="attack-info" bis_skin_checked="1"><table class="cargoTable noMerge sortable jquery-tablesorter"><thead><tr><th class="field_Damage headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Damage</th>
+<th class="field_Guard headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Guard</th>
+<th class="field_Startup headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Startup</th>
+<th class="field_Active headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Active</th>
+<th class="field_Recovery headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Recovery</th>
+<th class="field_On-Block headerSort" tabindex="0" role="columnheader button" title="Sort ascending">On-Block</th>
+<th class="field_On-Hit headerSort" tabindex="0" role="columnheader button" title="Sort ascending">On-Hit</th>
+<th class="field_Invuln headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Invuln</th>
+</tr></thead>
+<tbody><tr>
+<td class="field_Damage">3500→2500</td>
+<td class="field_Guard">Mid</td>
+<td class="field_Startup">8+5</td>
+<td class="field_Active">2×10</td>
+<td class="field_Recovery">14</td>
+<td class="field_On-Block">-20</td>
+<td class="field_On-Hit">HKD</td>
+<td class="field_Invuln">1~14All</td>
+</tr>
+</tbody></table>
+<div class="attack-info-body" bis_skin_checked="1">
+<p>Charlotta winds up and launches herself forward with a multi-hit attack.
+</p>
+<ul><li>Invulnerable on startup.</li>
+<li>Useful for punishing fireballs and other whiffed moves on reaction.</li>
+<li>More hits will land the closer you are.</li>
+<li>Awkward to punish on block for characters with stubby normals since Charlotta will bounce back a bit. Can be spotdodged after the super flash for a closer punish, but the timing is strict as it only leaves her -8.</li>
+<li>Technical input launches the opponent less, leading to better oki if you hit it midscreen.</li></ul>
+<div class="mw-collapsible mw-collapsed mw-made-collapsible" data-expandtext="Show Stats for Nerds" data-collapsetext="Hide Additional Data" style="width: 100%; max-width: 1080px;" bis_skin_checked="1"><button type="button" class="mw-collapsible-toggle mw-collapsible-toggle-default mw-collapsible-toggle-collapsed" aria-expanded="false" tabindex="0"><span class="mw-collapsible-text">Show Stats for Nerds</span></button><div class="mw-collapsible-content" style="display: none;" bis_skin_checked="1">
+<table class="cargoTable noMerge sortable jquery-tablesorter"><thead><tr><th class="field_Level headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Level</th>
+<th class="field_Attribute headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Attribute</th>
+</tr></thead>
+<tbody><tr>
+<td class="field_Level">4</td>
+<td class="field_Attribute"></td>
+</tr>
+</tbody></table>
+<ul><li>Clash Level 25 (Technical), Clash Level 20 (Easy)</li>
+<li>38F recovery on block/hit</li></ul>
+</div></div></div></div></div><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r507522">
+<p><br style="clear:both;">
+</p>
+</section>
